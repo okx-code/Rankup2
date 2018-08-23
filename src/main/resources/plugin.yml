@@ -1,0 +1,43 @@
+name: Rankup
+main: me.okx.rankup.Rankup
+version: '2.10'
+author: Okx
+depend: [Vault]
+softdepend: [PlaceholderAPI]
+api-version: 1.13
+commands:
+    rankup:
+        permission: rankup.rankup
+        description: Rankup to the next rank!
+    prestige:
+        permission: rankup.prestige
+        description: Prestige
+    pru:
+        permission: rankup.status
+        description: Rankup version.
+    ranks:
+        permission: rankup.ranks
+        description: List all the ranks.
+    prestiges:
+        permission: rankup.prestiges
+permissions:
+    rankup.*:
+        children:
+            rankup.ranks: true
+            rankup.rankup: true
+            rankup.reload: true
+            rankup.status: true
+            rankup.prestige: true
+            rankup.prestiges: true
+    rankup.status:
+        default: true
+    rankup.rankup:
+        default: true
+    rankup.prestige:
+        default: true
+    rankup.reload:
+        default: op
+    rankup.ranks:
+        default: true
+    rankup.prestiges:
+        default: true
